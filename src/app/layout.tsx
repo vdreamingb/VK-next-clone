@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Aside from "@/components/Aside";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoSans = Roboto({
   subsets: ["latin"],
 });
 
@@ -25,9 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${robotoSans.className} antialiased`}
       >
+        <Header />
+      <div className="flex items-start max-w-[1100px] m-auto t-[90px] gap-5 max-h-screen h-full pt-[170px] px-3">
+      <Aside />
         {children}
+      </div>
       </body>
     </html>
   );
