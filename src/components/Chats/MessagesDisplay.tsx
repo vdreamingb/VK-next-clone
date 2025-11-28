@@ -18,7 +18,7 @@ export default function MessagesDisplay(){
 
     },[params.friendName])
 
-    return <div className="h-[calc(100%-50px)] w-full overflow-auto pb-3">
+    return <div className="h-[calc(100%-50px)] w-full overflow-auto pb-3 max-sm:flex-1">
         <ul>
             {filteredList.map((messageGroup)=>
                 <li key={messageGroup.date} className="not-last:mb-5 z-10">

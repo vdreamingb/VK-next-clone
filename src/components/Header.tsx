@@ -11,7 +11,6 @@ interface HeaderProps {
 }
 
 export default function Header({isOpen, setIsOpen}: HeaderProps) {
-  console.log(isOpen);
   return (
     <header className="fixed shadow-gray-700 shadow-xs p-2 w-full z-20 bg-neutral-900">
       <div className="container flex justify-between items-center">

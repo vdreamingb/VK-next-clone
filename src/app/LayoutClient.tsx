@@ -15,7 +15,7 @@ export default function LayoutClient({
   return <>
     <Header isOpen={isOpen} setIsOpen={setIsOpen} />
     <div className="flex items-start max-w-[1100px] m-auto t-[90px] gap-5 max-h-screen h-full pt-[170px] px-3">
-      <Aside isOpen={isOpen} />
+      <Aside isOpen={isOpen} setIsOpen={setIsOpen}/>
       {children}
     </div>
   </>;
