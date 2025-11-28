@@ -1,4 +1,9 @@
 import { PHOTOS } from "@/shared/data/photo.data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Photos",
+}
 
 export default function PhotosPage(){
     return <main className="h-[calc(100vh-170px)]">
