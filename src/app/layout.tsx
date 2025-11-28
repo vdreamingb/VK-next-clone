@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Aside from "@/components/Aside";
+import LayoutClient from "./LayoutClient";
 
 const robotoSans = Roboto({
   subsets: ["latin"],
@@ -18,16 +17,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
-        className={`${robotoSans.className} antialiased`}
+        className={`${robotoSans.className} antialiased [&::-webkit-scrollbar]:w-1 [&::-webkit-scrollbar-thumb]:bg-gray-600 [&::-webkit-scrollbar-thumb]:rounded-xs`}
       >
-        <Header />
-      <div className="flex items-start max-w-[1100px] m-auto t-[90px] gap-5 max-h-screen h-full pt-[170px] px-3">
-      <Aside />
-        {children}
-      </div>
+        <LayoutClient>
+          {children}
+        </LayoutClient>
       </body>
     </html>
   );
